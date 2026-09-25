@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gunmay Turns 17 — Birthday Invitation</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(72, 219, 251, .10), transparent 28%),
+        radial-gradient(circle at 85% 80%, rgba(139, 92, 246, .12), transparent 30%),
+        #07090e;
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 35px 15px;
+}
+
+.invitation {
+    width: min(760px, 100%);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 32px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.015)
+        ),
+        #0b0e15;
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.45),
+        inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+/* ---------------- TOP ---------------- */
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.top-label {
+    font-size: 10px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #89919f;
+    font-weight: 700;
+}
+
+.number {
+    border: 1px solid rgba(255,255,255,.12);
+    padding: 7px 11px;
+    border-radius: 100px;
+    font-size: 10px;
+    color: #bfc5d0;
+    letter-spacing: .12em;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+    text-align: center;
+    padding: 65px 30px 50px;
+    position: relative;
+}
+
+.hero-eyebrow {
+    color: #58e4f4;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .35em;
+    font-weight: 800;
+}
+
+.hero h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(58px, 13vw, 105px);
+    line-height: .82;
+    letter-spacing: -.08em;
+    margin-top: 20px;
+    font-weight: 700;
+
+    background: linear-gradient(
+        100deg,
+        #ffffff,
+        #b9f7ff 45%,
+        #b79aff
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.turns {
+    font-family: "Space Grotesk", sans-serif;
+    color: #d7dbe2;
+    font-size: clamp(27px, 6vw, 45px);
+    font-weight: 600;
+    letter-spacing: -.04em;
+    margin-top: 8px;
+}
+
+.line {
+    height: 1px;
+    width: 55%;
+    margin: 28px auto;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.3),
+        transparent
+    );
+}
+
+.dedication {
+    max-width: 520px;
+    margin: auto;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #bfc5d0;
+}
+
+.dedication strong {
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+}
+
+/* ---------------- DETAILS ---------------- */
+
+.details {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 12px;
+    padding: 0 25px;
+}
+
+.detail-card {
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 20px;
+    padding: 21px;
+    background: rgba(255,255,255,.035);
+}
+
+.detail-label {
+    color: #747d8b;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 800;
+    margin-bottom: 9px;
+}
+
+.venue {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.detail-sub {
+    color: #8e97a6;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.time {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -.04em;
+}
+
+.time-sub {
+    color: #8e97a6;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ---------------- SECTION TITLE ---------------- */
+
+.section {
+    padding: 0 25px;
+    margin-top: 35px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 15px;
+}
+
+.section-heading span {
+    color: #7d8592;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.section-heading::after {
+    content: "";
+    height: 1px;
+    background: rgba(255,255,255,.1);
+    flex: 1;
+}
+
+/* ---------------- ACTIVITIES ---------------- */
+
+.activities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.activity {
+    min-height: 205px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,.1);
+    padding: 22px;
+    text-align: left;
+    cursor: pointer;
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.025)
+        );
+
+    transition: .25s ease;
+}
+
+.activity:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,.25);
+}
+
+.activity.active {
+    border-color: rgba(83,225,243,.6);
+    box-shadow: inset 0 0 50px rgba(83,225,243,.06);
+}
+
+.activity:nth-child(2).active {
+    border-color: rgba(157,123,255,.65);
+    box-shadow: inset 0 0 50px rgba(157,123,255,.07);
+}
+
+/* giant background number */
+
+.activity-number {
+    position: absolute;
+    right: -5px;
+    top: -28px;
+    font-family: "Space Grotesk";
+    font-size: 150px;
+    line-height: 1;
+    font-weight: 700;
+    color: rgba(255,255,255,.025);
+}
+
+/* icon */
+
+.activity-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+
+    background: rgba(83,225,243,.09);
+    border: 1px solid rgba(83,225,243,.16);
+
+    font-size: 25px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.activity:nth-child(2) .activity-icon {
+    background: rgba(157,123,255,.1);
+    border-color: rgba(157,123,255,.17);
+}
+
+.activity-number-small {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+
+    font-size: 9px;
+    letter-spacing: .15em;
+    color: #737b89;
+    font-weight: 800;
+}
+
+.activity h3 {
+    position: relative;
+    z-index: 2;
+
+    font-family: "Space Grotesk";
+    font-size: 22px;
+    margin-top: 30px;
+    letter-spacing: -.03em;
+}
+
+.activity p {
+    position: relative;
+    z-index: 2;
+
+    color: #8f98a7;
+    font-size: 12px;
+    line-height: 1.55;
+    margin-top: 6px;
+    max-width: 260px;
+}
+
+/* ---------------- TIMELINE ---------------- */
+
+.schedule {
+    position: relative;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,.09);
+    background:
+        linear-gradient(
+            120deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.018)
+        );
+    padding: 22px;
+}
+
+/* central line */
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 64px;
+    top: 15px;
+    bottom: 15px;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        #52e3f2,
+        #9c7bff,
+        rgba(255,255,255,.08)
+    );
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 48px 32px 1fr;
+    align-items: center;
+    gap: 16px;
+    min-height: 72px;
+    position: relative;
+}
+
+.event-time {
+    font-family: "Space Grotesk";
+    font-size: 13px;
+    font-weight: 700;
+    color: #d9dde5;
+    text-align: right;
+}
+
+.event-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #10151e;
+    border: 2px solid #57e2f1;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 14px rgba(87,226,241,.3);
+}
+
+.event:nth-child(3) .event-dot,
+.event:nth-child(4) .event-dot {
+    border-color: #9c7bff;
+    box-shadow: 0 0 14px rgba(156,123,255,.25);
+}
+
+.event-content {
+    padding: 12px 15px;
+    border-radius: 14px;
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(255,255,255,.06);
+}
+
+.event-title {
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.event-desc {
+    color: #777f8d;
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+/* ---------------- CTA ---------------- */
+
+.cta {
+    display: flex;
+    gap: 10px;
+    padding: 25px;
+}
+
+.confirm {
+    flex: 1;
+    min-height: 50px;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+
+    background: linear-gradient(
+        100deg,
+        #effdff,
+        #dce6ff
+    );
+
+    color: #080a0f;
+    font-size: 14px;
+    font-weight: 800;
+
+    transition: .2s;
+}
+
+.confirm:hover {
+    transform: translateY(-2px);
+}
+
+.celebrate {
+    width: 55px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,.1);
+    background: rgba(255,255,255,.05);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.status {
+    text-align: center;
+    min-height: 20px;
+    color: #9ca4b2;
+    font-size: 12px;
+    padding: 0 20px;
+}
+
+.footer {
+    text-align: center;
+    color: #555d69;
+    font-size: 9px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    padding: 0 20px 25px;
+}
+
+/* ---------------- CONFETTI ---------------- */
+
+.confetti {
+    position: absolute;
+    width: 5px;
+    height: 11px;
+    top: 0;
+    animation: fall 1.7s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        transform:
+            translateY(500px)
+            rotate(600deg);
+        opacity: 0;
+    }
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .invitation {
+        border-radius: 25px;
+    }
+
+    .top {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 50px 20px 40px;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+        padding: 0 18px;
+    }
+
+    .section {
+        padding: 0 18px;
+    }
+
+    .activities {
+        grid-template-columns: 1fr;
+    }
+
+    .activity {
+        min-height: 180px;
+    }
+
+    .schedule {
+        padding: 17px;
+    }
+
+    .timeline::before {
+        left: 59px;
+    }
+
+    .event {
+        grid-template-columns: 43px 32px 1fr;
+        gap: 12px;
+    }
+
+    .cta {
+        padding: 20px 18px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="invitation" id="invite">
+
+    <!-- HEADER -->
+
+    <div class="top">
+        <div class="top-label">
+            Private Birthday Invitation
+        </div>
+
+        <div class="number">
+            17 / 17
+        </div>
+    </div>
+
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <div class="hero-eyebrow">
+            The Birthday Edition
+        </div>
+
+        <h1>GUNMAY</h1>
+
+        <div class="turns">
+            turns seventeen.
+        </div>
+
+        <div class="line"></div>
+
+        <p class="dedication">
+            This invitation is specially reserved for
+            <strong>Purab.</strong><br>
+            Come celebrate, compete, jump and make some memories.
+        </p>
+
+    </div>
+
+
+    <!-- EVENT DETAILS -->
+
+    <div class="details">
+
+        <div class="detail-card">
+
+            <div class="detail-label">
+                The Venue
+            </div>
+
+            <div class="venue">
+                Sky Jumpers · IDL Mall
+            </div>
+
+            <div class="detail-sub">
+                An afternoon built for movement & fun
+            </div>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <div class="detail-label">
+                The Time
+            </div>
+
+            <div class="time">
+                11 AM — 2 PM
+            </div>
+
+            <div class="time-sub">
+                Birthday session
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ACTIVITIES -->
+
+    <div class="section">
+
+        <div class="section-heading">
+            <span>The Experience</span>
+        </div>
+
+        <div class="activities">
+
+            <button
+                class="activity active"
+                data-activity="Laser Tag"
+                type="button">
+
+                <div class="activity-number">
+                    01
+                </div>
+
+                <div class="activity-number-small">
+                    BATTLE
+                </div>
+
+                <div class="activity-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Laser Tag
+                </h3>
+
+                <p>
+                    Lights down. Teams ready.
+                    Strategy, speed and a little friendly competition.
+                </p>
+
+            </button>
+
+
+            <button
+                class="activity"
+                data-activity="Trampoline Park"
+                type="button">
+
+                <div class="activity-number">
+                    02
+                </div>
+
+                <div class="activity-number-small">
+                    AIR TIME
+                </div>
+
+                <div class="activity-icon">
+                    ↗
+                </div>
+
+                <h3>
+                    Trampoline Park
+                </h3>
+
+                <p>
+                    Jump higher, bounce harder
+                    and temporarily forget that gravity exists.
+                </p>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCHEDULE -->
+
+    <div class="section">
+
+        <div class="section-heading">
+            <span>The Birthday Run</span>
+        </div>
+
+
+        <div class="schedule">
+
+            <div class="timeline">
+
+                <div class="event">
+
+                    <div class="event-time">
+                        11:00
+                    </div>
+
+                    <div class="event-dot"></div>
+
+                    <div class="event-content">
+                        <div class="event-title">
+                            Arrival
+                        </div>
+
+                        <div class="event-desc">
+                            Meet up & birthday kickoff
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="event">
+
+                    <div class="event-time">
+                        11:15
+                    </div>
+
+                    <div class="event-dot"></div>
+
+                    <div class="event-content">
+                        <div class="event-title">
+                            Laser Tag
+                        </div>
+
+                        <div class="event-desc">
+                            Teams formed. Battle begins.
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="event">
+
+                    <div class="event-time">
+                        12:15
+                    </div>
+
+                    <div class="event-dot"></div>
+
+                    <div class="event-content">
+                        <div class="event-title">
+                            Trampoline Park
+                        </div>
+
+                        <div class="event-desc">
+                            Jump, bounce & let loose.
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="event">
+
+                    <div class="event-time">
+                        01:30
+                    </div>
+
+                    <div class="event-dot"></div>
+
+                    <div class="event-content">
+                        <div class="event-title">
+                            Cake & Celebration
+                        </div>
+
+                        <div class="event-desc">
+                            Photos, cake & birthday chaos.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BUTTONS -->
+
+    <div class="cta">
+
+        <button
+            class="confirm"
+            id="confirm"
+            type="button">
+
+            Confirm for Purab →
+        </button>
+
+        <button
+            class="celebrate"
+            id="celebrate"
+            type="button">
+
+            ✦
+
+        </button>
+
+    </div>
+
+
+    <div
+        class="status"
+        id="status"
+        aria-live="polite">
+
+        Your invitation is ready.
+        Select an activity above.
+
+    </div>
+
+
+    <div class="footer">
+        Gunmay · 17th Birthday · Made for Purab
+    </div>
+
+</div>
+
+
+<script>
+
+const invite = document.getElementById("invite");
+
+const activities =
+    document.querySelectorAll(".activity");
+
+const status =
+    document.getElementById("status");
+
+
+// ACTIVITY SELECTION
+
+activities.forEach(activity => {
+
+    activity.addEventListener("click", () => {
+
+        activities.forEach(item =>
+            item.classList.remove("active")
+        );
+
+        activity.classList.add("active");
+
+        status.textContent =
+            activity.dataset.activity +
+            " selected. See you at 11:00 AM.";
+
+    });
+
+});
+
+
+// CONFIRM BUTTON
+
+document
+    .getElementById("confirm")
+    .addEventListener("click", () => {
+
+        status.textContent =
+            "✓ Purab is officially on the guest list. See you there!";
+
+        createConfetti();
+
+    });
+
+
+// CELEBRATE BUTTON
+
+document
+    .getElementById("celebrate")
+    .addEventListener("click", () => {
+
+        status.textContent =
+            "✦ HAPPY 17TH, GUNMAY! Let the birthday begin.";
+
+        createConfetti();
+
+    });
+
+
+// CONFETTI
+
+function createConfetti() {
+
+    const colors = [
+        "#53e1f2",
+        "#9c7bff",
+        "#ffffff"
+    ];
+
+    for (let i = 0; i < 35; i++) {
+
+        const piece =
+            document.createElement("span");
+
+        piece.className = "confetti";
+
+        piece.style.left =
+            Math.random() * 100 + "%";
+
+        piece.style.background =
+            colors[
+                Math.floor(
+                    Math.random() * colors.length
+                )
+            ];
+
+        piece.style.animationDelay =
+            Math.random() * .4 + "s";
+
+        invite.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 2000);
+    }
+}
+
+</script>
+
+</body>
+</html>
